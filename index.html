@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Products - Online Store</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Best Products</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -15,201 +16,182 @@
 
         body {
             background: #f5f7fa;
-            color: #333;
         }
 
+        /* Header */
         header {
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        /* Search Bar */
+        .search-container {
+            position: relative;
+        }
+
+        .search-container input {
+            padding: 8px 35px 8px 12px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            width: 220px;
+        }
+
+        .search-container span {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #2a5298;
+            font-size: 16px;
+        }
+
+        /* Main Section */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
             padding: 20px;
             text-align: center;
         }
 
-        header h1 {
-            font-size: 2.5rem;
+        .title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #333;
         }
 
-        nav {
-            background: #ffffff;
-            padding: 10px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #1e3c72;
-            font-weight: 600;
-        }
-
-        .container {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
+        /* Product Card */
         .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             gap: 25px;
         }
 
-        .product {
-            background: #fff;
+        .product-card {
+            background: white;
+            padding: 20px;
+            width: 260px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
             transition: transform 0.3s;
         }
 
-        .product:hover {
-            transform: translateY(-10px);
+        .product-card:hover {
+            transform: translateY(-8px);
         }
 
-        .product img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .product-content {
-            padding: 15px;
-            text-align: center;
-        }
-
-        .product h3 {
+        .product-name {
+            font-size: 18px;
+            font-weight: 600;
             margin-bottom: 10px;
         }
 
         .price {
             color: #2a5298;
-            font-size: 1.2rem;
+            font-size: 16px;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
+        /* Button */
         .btn {
             display: inline-block;
-            padding: 10px 15px;
+            padding: 10px 18px;
             background: #25D366;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-            transition: 0.3s;
+            border-radius: 25px;
+            transition: background 0.3s;
+            font-weight: 500;
         }
 
         .btn:hover {
             background: #1ebe5d;
         }
 
+        /* Footer */
         footer {
             background: #1e3c72;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             margin-top: 40px;
         }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .search-container input {
+                width: 180px;
+            }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Best Products</h1>
-    <p>Your One-Stop Online Shopping Store</p>
-</header>
+    <!-- Header -->
+    <header>
+        <div class="logo">Best Products</div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search product..." onkeyup="searchProduct()">
+            <span>🔍</span>
+        </div>
+    </header>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#products">Products</a>
-    <a href="https://wa.me/ target="_blank">📞 +91 8847454858</a>
-</nav>
+    <!-- Main Content -->
+    <div class="container">
+        <h2 class="title">Our Products</h2>
+        <div class="products" id="productList">
 
-<div class="container" id="products">
-    <h2 style="text-align:center; margin-bottom: 30px;">Our Products</h2>
-    <div class="products">
-<footer>
-    <p>© 2026 Best Products | All Rights Reserved</p>
-</footer>
-<!-- Product -->
-<!-- Hoppup Xo3 Gaming Earbuds -->
-<div class="product">
-    <!-- Image Section -->
-    <div class="image-container">
-        <img src="https://images.meesho.com/images/products/409579286/kahxm_512.avif?width=360"
-             alt="Hoppup Xo3 Gaming Earbuds">
-        <span class="price-tag">₹899</span>
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-name">Hoppup Xo3 Gaming Earbuds</div>
+                <div class="price">₹899</div>
+                <a href="details.html" class="btn">Order Now</a>
+            </div>
+
+            <!-- Aap yahan aur products bhi add kar sakte hain -->
+
+        </div>
     </div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Product Details</title>
-    <style>
-        body { font-family: Arial; text-align: center; background: #f5f7fa; }
-        .container {
-            background: white;
-            margin: 40px auto;
-            padding: 20px;
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .btn {
-            background: #2a5298;
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
 
-<div class="container">
-    <h2>Product Details</h2>
-    <p>
-        Hoppup Xo3 Gaming Earbuds come with 35ms low latency, powerful 13mm drivers, 
-        and up to 50 hours of playtime. Designed for gamers, these earbuds provide 
-        immersive sound and a comfortable fit for long usage.
-    </p>
-    <a href="order.html" class="btn">Order Now</a>
-</div>
+    <!-- Footer -->
+    <footer>
+        © 2026 Best Products | All Rights Reserved
+    </footer>
+
+    <!-- Search Script -->
+    <script>
+        function searchProduct() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const products = document.getElementsByClassName('product-card');
+
+            for (let i = 0; i < products.length; i++) {
+                const name = products[i].querySelector('.product-name').innerText.toLowerCase();
+                if (name.includes(input)) {
+                    products[i].style.display = "block";
+                } else {
+                    products[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Order Summary</title>
-    <style>
-        body { font-family: Arial; text-align: center; background: #f5f7fa; }
-        .container {
-            background: white;
-            margin: 40px auto;
-            padding: 20px;
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        img { width: 100%; border-radius: 10px; }
-        .btn {
-            background: #2a5298;
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
 
-<div class="container">
-    <img src="https://images.meesho.com/images/products/409579286/kahxm_512.avif?width=360" alt="Earbuds">
-    <h2>Hoppup Xo3 Gaming Earbuds</h2>
-    <p><strong>Price:</strong> ₹899</p>
-    <a href="payment.html" class="btn">Continue</a>
-</div>
-
-</body>
-</html>
