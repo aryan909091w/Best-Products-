@@ -147,3 +147,149 @@
 </body>
 </html>
 <a href="address.html" class="btn">Proceed to Checkout</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Sports Shoes - Best Products</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7fa;
+        }
+
+        header {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .product-image {
+            flex: 1 1 300px;
+            text-align: center;
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+        }
+
+        .product-details {
+            flex: 1 1 300px;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: #1e3c72;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .sizes {
+            margin: 15px 0;
+        }
+
+        select {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            margin-right: 10px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn.secondary {
+            background: #6c757d;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            background: #1e3c72;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>Best Products</header>
+
+<div class="container">
+    <div class="product-image">
+        <img src="images/shoes.jpg" alt="Men's Sports Shoes">
+    </div>
+
+    <div class="product-details">
+        <h2>Men's Sports Shoes</h2>
+        <p class="price">₹369</p>
+        <p>
+            Comfortable and stylish sports shoes designed for daily wear, walking, and running. 
+            Lightweight material with a durable sole ensures long-lasting performance and all-day comfort.
+        </p>
+
+        <div class="sizes">
+            <label for="size"><strong>Select Size:</strong></label><br>
+            <select id="size" name="size" required>
+                <option value="">Choose Size</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+
+        <div class="buttons">
+            <a href="address.html" class="btn">Order Now</a>
+            <a href="index.html" class="btn secondary">Back to Home</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2026 Best Products | All Rights Reserved
+</footer>
+
+</body>
+</html>
