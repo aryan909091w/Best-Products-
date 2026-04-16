@@ -175,3 +175,173 @@
 
 </body>
 </html>
+https://wa.me/8847454858
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Address - Best Products</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #f3f4f6;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: #1e3c72;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .form-container {
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: 500;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        .row {
+            display: flex;
+            gap: 10px;
+        }
+        .row .form-group {
+            flex: 1;
+        }
+        .btn-continue {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        @media (max-width: 500px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">Edit Delivery Address</div>
+
+    <div class="form-container">
+        <form id="addressForm">
+            <div class="row">
+                <div class="form-group">
+                    <label>Name *</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Contact Number *</label>
+                    <input type="tel" id="phone" pattern="[0-9]{10}" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>House No./ Building Name *</label>
+                <input type="text" id="house" required>
+            </div>
+
+            <div class="form-group">
+                <label>Road Name / Area / Colony *</label>
+                <input type="text" id="area" required>
+            </div>
+
+            <div class="form-group">
+                <label>Pincode *</label>
+                <input type="text" id="pincode" pattern="[0-9]{6}" required>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label>City *</label>
+                    <input type="text" id="city" required>
+                </div>
+                <div class="form-group">
+                    <label>State *</label>
+                    <input type="text" id="state" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Nearby Landmark (Optional)</label>
+                <textarea id="landmark"></textarea>
+            </div>
+
+            <button type="submit" class="btn-continue">Continue & Send to WhatsApp</button>
+        </form>
+    </div>
+</div>
+
+<script>
+document.getElementById("addressForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Apna WhatsApp number yahan dalen (country code ke saath)
+    var phoneNumber = "918847454858"; // <-- Apna number yahan change karein
+
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var house = document.getElementById("house").value;
+    var area = document.getElementById("area").value;
+    var pincode = document.getElementById("pincode").value;
+    var city = document.getElementById("city").value;
+    var state = document.getElementById("state").value;
+    var landmark = document.getElementById("landmark").value;
+
+    var message = 
+        "🛒 *New Order - Best Products*%0A%0A" +
+        "👤 *Name:* " + name + "%0A" +
+        "📞 *Phone:* " + phone + "%0A" +
+        "🏠 *Address:* " + house + ", " + area + "%0A" +
+        "📍 *City:* " + city + "%0A" +
+        "🗺️ *State:* " + state + "%0A" +
+        "📮 *Pincode:* " + pincode + "%0A" +
+        "📌 *Landmark:* " + landmark + "%0A%0A" +
+        "Please confirm this order.";
+
+    var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + message;
+
+    // WhatsApp open karega
+    window.open(whatsappURL, "_blank");
+
+    // Optional: Payment page par redirect
+    setTimeout(function() {
+        window.location.href = "payment.html";
+    }, 1000);
+});
+</script>
+
+</body>
+</html>
